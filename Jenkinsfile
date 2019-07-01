@@ -9,7 +9,7 @@ node {
 
     stage('execute shell commands') {
 
-        echo 'hello world'
+        echo 'hello world - new release'
 
 
     }
