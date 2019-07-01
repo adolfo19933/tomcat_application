@@ -9,7 +9,7 @@ node {
 
     stage('execute shell commands') {
                  echo 'Running bat scripts'
-                 bat "\C:\\Program Files (x86)\\Jenkins\\jobs\\Build-app\\workspace\\scripts\\hello.bat\""
+                 bat "\"C:\\Program Files (x86)\\Jenkins\\jobs\\Build-app\\workspace\\scripts\\hello.bat\""
 
     }
 }
