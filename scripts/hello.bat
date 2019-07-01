@@ -1,3 +1,3 @@
 words="hello"
 
-echo $words
+echo %words%
