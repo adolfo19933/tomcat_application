@@ -8,15 +8,8 @@ node {
     }
 
     stage('execute shell commands') {
-
-        steps {
                  echo 'Running bat scripts'
                  bat "C:\\Program Files (x86)\\Jenkins\\jobs\\Build-app\\workspace\\scripts\\hello"
-
-        }
-       
-
-
 
     }
 }
