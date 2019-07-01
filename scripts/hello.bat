@@ -1,3 +1,1 @@
-words="hello"
-
-echo %words%
+echo Hello
