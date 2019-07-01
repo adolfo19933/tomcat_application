@@ -6,4 +6,11 @@ node {
 
         checkout scm
     }
+
+    stage('execute shell commands') {
+
+        sh /scripts/hello.sh
+
+
+    }
 }
