@@ -1,13 +1,11 @@
-node {
-    def app
+pipeline {
+    agent any
 
-    stage('Clone repository locally') {
-        /* Let's make sure we have the repository cloned to our workspace */
-
-      stage 'enter commit id'
+stage 'promotion'
 def userInput = input(
- id: 'enter commit id', message: 'select a commit id', parameters: [
- [$class: 'commit id', defaultValue: '', description: 'enter commit id', name: 'commit id']
+ id: 'userInput', message: 'Let\'s promote?', parameters: [
+ [$class: 'TextParameterDefinition', defaultValue: 'uat', description: 'Environment', name: 'env']
 ])
-echo ("commit id: "+userInput)
+echo ("Env: "+userInput)
+
 }
