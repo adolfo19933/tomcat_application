@@ -1,18 +1,18 @@
 pipeline {
     agent any
-
-stages {
-stage ('promotion') {
-    steps {
-
-def userInput = input(
- id: 'userInput', message: 'Let\'s promote?', parameters: [
- [$class: 'TextParameterDefinition', defaultValue: 'uat', description: 'Environment', name: 'env']
-])
-echo ("Env: "+userInput)
-
+    stages {
+        stage('Example') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+            }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+            }
         }
     }
-
-}
 }
