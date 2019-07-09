@@ -4,10 +4,10 @@ pipeline {
         stage('Select commit id') {
             input {
                 message "ENTER COMMIT ID"
-                ok "Continue"
+                ok "Continue to deploy"
                 submitter "USER"
                 parameters {
-                    string(name: 'COMMIT_ID', defaultValue: 'Enter commit id here', description: 'Which commit id should i deploy?')
+                    string(name: 'COMMIT_ID', defaultValue: '', description: 'Which commit id should i deploy?')
                 }
             }
             steps {
