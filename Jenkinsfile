@@ -1,17 +1,17 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Select commit id') {
             input {
-                message "Should we continue?"
-                ok "Yes, we should."
+                message "ENTER COMMIT ID?"
+                ok "Continue"
                 submitter "alice,bob"
                 parameters {
-                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                    string(name: 'COMMIT_ID', defaultValue: 'Enter commit id here', description: 'Which commit id should i deploy?')
                 }
             }
             steps {
-                echo "Hello, ${PERSON}, nice to meet you."
+                echo "You have selected commit id, ${COMMIT_ID} "
             }
         }
     }
