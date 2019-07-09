@@ -4,12 +4,12 @@ node {
     stage('Clone repository locally') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-        checkout scm
+       BRANCHDEPLOY = input message: 'enter commit id'
     }
 
     stage('execute shell commands') {
 
-        echo 'hello world'
+        echo 'you have selected' $BRANCHDEPLOY
 
 
     }
