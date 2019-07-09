@@ -4,13 +4,10 @@ node {
     stage('Clone repository locally') {
         /* Let's make sure we have the repository cloned to our workspace */
 
-       BRANCHDEPLOY = input message: 'enter commit id'
-    }
-
-    stage('execute shell commands') {
-
-        echo 'you have selected' $BRANCHDEPLOY
-
-
-    }
+      stage 'enter commit id'
+def userInput = input(
+ id: 'enter commit id', message: 'select a commit id', parameters: [
+ [$class: 'commit id', defaultValue: '', description: 'enter commit id', name: 'commit id']
+])
+echo ("commit id: "+userInput)
 }
