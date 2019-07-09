@@ -1,6 +1,7 @@
 pipeline {
     agent any
 
+stages {
 stage ('promotion') {
     steps {
 
@@ -13,4 +14,5 @@ echo ("Env: "+userInput)
         }
     }
 
+}
 }
