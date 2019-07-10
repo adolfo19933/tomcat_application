@@ -12,11 +12,9 @@ pipeline {
             }
             steps {
                 echo "You have selected commit id, ${COMMIT_ID} "
-                if(${COMMIT_ID} == null) {
-
-                    echo "no entry entered"
-                }
-            }
+        
+            
         }
     }
+}
 }
