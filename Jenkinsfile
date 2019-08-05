@@ -11,10 +11,11 @@ pipeline {
                 }
             }
             steps {
-                echo "You have selected commit id, ${COMMIT_ID} "
+                echo "You have s commit id, ${COMMIT_ID} "
         
             
         }
+        git checkout ${COMMIT_ID}
     }
 }
 }
